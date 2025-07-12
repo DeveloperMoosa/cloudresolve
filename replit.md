@@ -1,0 +1,111 @@
+# replit.md
+
+## Overview
+
+This is a full-stack web application built with React and Express.js, featuring a modern IT support company website called "CloudResolve". The application uses TypeScript throughout, implements a component-based UI architecture with shadcn/ui, and includes a contact form with database storage capabilities.
+
+## User Preferences
+
+Preferred communication style: Simple, everyday language.
+
+## System Architecture
+
+### Frontend Architecture
+- **Framework**: React 18 with TypeScript
+- **Routing**: Wouter for client-side routing
+- **State Management**: TanStack Query for server state management
+- **Styling**: Tailwind CSS with custom Azure-blue theme
+- **UI Components**: shadcn/ui component library built on Radix UI primitives
+- **Animations**: Framer Motion for smooth animations and transitions
+- **Build Tool**: Vite for fast development and optimized builds
+
+### Backend Architecture
+- **Runtime**: Node.js with Express.js server
+- **Language**: TypeScript with ES modules
+- **API Pattern**: RESTful API design
+- **Development Setup**: Hot reload with Vite middleware in development
+- **Production Build**: esbuild for server-side bundling
+
+### Component Structure
+The frontend follows a well-organized component architecture:
+- **Layout Components**: Navigation, Footer
+- **Section Components**: Modular page sections (Hero, About, Services, etc.)
+- **UI Components**: Reusable shadcn/ui components
+- **Pages**: Route-based page components
+
+## Key Components
+
+### Database Layer
+- **ORM**: Drizzle ORM with PostgreSQL dialect
+- **Schema**: Shared TypeScript schema definitions with Zod validation
+- **Storage**: Abstracted storage interface with in-memory implementation for development
+- **Tables**: Users table and contact submissions table
+
+### Form Handling
+- **Validation**: React Hook Form with Zod resolvers for type-safe form validation
+- **Contact Form**: Complete contact form with fields for name, company, email, phone, and message
+- **Error Handling**: Comprehensive error handling with user-friendly messages
+
+### UI/UX Features
+- **Responsive Design**: Mobile-first responsive design
+- **Dark Mode Support**: Built-in dark mode capabilities
+- **Smooth Scrolling**: Animated section navigation
+- **Loading States**: Proper loading states and error handling
+- **Toast Notifications**: User feedback through toast notifications
+
+## Data Flow
+
+1. **Frontend Form Submission**: User fills out contact form with validation
+2. **API Request**: Form data sent to `/api/contact` endpoint via TanStack Query
+3. **Server Processing**: Express.js validates data using Zod schema
+4. **Database Storage**: Contact submission stored using storage abstraction layer
+5. **Response Handling**: Success/error response sent back to client
+6. **UI Feedback**: Toast notification displayed to user
+
+### Storage Abstraction
+The application uses an `IStorage` interface that currently implements in-memory storage but can be easily swapped for a database implementation:
+- `createContactSubmission()`: Stores new contact form submissions
+- `getContactSubmissions()`: Retrieves all submissions (admin functionality)
+- `createUser()` and `getUserByUsername()`: User management (prepared for future auth)
+
+## External Dependencies
+
+### Core Technologies
+- **@neondatabase/serverless**: Prepared for PostgreSQL database connection
+- **drizzle-orm**: Type-safe database ORM
+- **@tanstack/react-query**: Server state management
+- **react-hook-form**: Form handling and validation
+- **zod**: Runtime type validation
+- **framer-motion**: Animation library
+
+### UI Framework
+- **@radix-ui/***: Comprehensive collection of unstyled, accessible UI primitives
+- **tailwindcss**: Utility-first CSS framework
+- **class-variance-authority**: Type-safe variant styling
+- **clsx**: Conditional className utility
+
+### Development Tools
+- **vite**: Fast build tool and development server
+- **typescript**: Type safety and enhanced developer experience
+- **wouter**: Lightweight React router
+
+## Deployment Strategy
+
+### Development
+- Vite development server with HMR (Hot Module Replacement)
+- Express middleware integration for seamless full-stack development
+- TypeScript compilation and type checking
+- Automatic database schema pushing with `drizzle-kit push`
+
+### Production Build
+- Frontend: Vite builds optimized static assets to `dist/public`
+- Backend: esbuild bundles server code to `dist/index.js`
+- Single deployment artifact with both frontend and backend
+- Environment variable configuration for database connections
+
+### Environment Configuration
+- `DATABASE_URL`: PostgreSQL connection string
+- `NODE_ENV`: Environment mode (development/production)
+- Drizzle configuration points to `./shared/schema.ts` for schema definitions
+
+The application is designed to be easily deployable on platforms like Replit, Vercel, or any Node.js hosting service with minimal configuration changes.
