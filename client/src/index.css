@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Wave background animation */
+@keyframes waveMotion {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(-10px) translateY(-5px);
+  }
+  50% {
+    transform: translateX(5px) translateY(0);
+  }
+  75% {
+    transform: translateX(-5px) translateY(5px);
+  }
+}
+
+.wave-bg {
+  animation: waveMotion 20s ease-in-out infinite;
+}
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(220, 14.3%, 4.1%);

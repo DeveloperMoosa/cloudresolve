@@ -20,6 +20,7 @@ Preferred communication style: Simple, everyday language.
 - Removed Awards section completely as per user request (July 17, 2025)
 - Updated testimonials section to remove "award-winning" reference
 - Replaced analytics dashboard image in testimonials section with professional IT support team image
+- Added abstract wave background to Experience section with subtle animation effect (iStock video background)
 
 ## System Architecture
 

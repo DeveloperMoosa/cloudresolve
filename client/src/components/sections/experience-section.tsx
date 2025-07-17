@@ -3,29 +3,18 @@ import { Button } from "@/components/ui/button";
 
 const ExperienceSection = () => {
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
-      {/* Network Pattern Background */}
-      <div className="absolute inset-0 opacity-10">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="network" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-              <circle cx="20" cy="20" r="2" fill="hsl(207, 90%, 49%)" opacity="0.5"/>
-              <circle cx="80" cy="20" r="2" fill="hsl(207, 90%, 49%)" opacity="0.5"/>
-              <circle cx="50" cy="50" r="2" fill="hsl(207, 90%, 49%)" opacity="0.5"/>
-              <circle cx="20" cy="80" r="2" fill="hsl(207, 90%, 49%)" opacity="0.5"/>
-              <circle cx="80" cy="80" r="2" fill="hsl(207, 90%, 49%)" opacity="0.5"/>
-              
-              <line x1="20" y1="20" x2="50" y2="50" stroke="hsl(207, 90%, 49%)" strokeWidth="1" opacity="0.3"/>
-              <line x1="50" y1="50" x2="80" y2="20" stroke="hsl(207, 90%, 49%)" strokeWidth="1" opacity="0.3"/>
-              <line x1="20" y1="80" x2="50" y2="50" stroke="hsl(207, 90%, 49%)" strokeWidth="1" opacity="0.3"/>
-              <line x1="50" y1="50" x2="80" y2="80" stroke="hsl(207, 90%, 49%)" strokeWidth="1" opacity="0.3"/>
-              <line x1="20" y1="20" x2="20" y2="80" stroke="hsl(207, 90%, 49%)" strokeWidth="1" opacity="0.2"/>
-              <line x1="80" y1="20" x2="80" y2="80" stroke="hsl(207, 90%, 49%)" strokeWidth="1" opacity="0.2"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#network)"/>
-        </svg>
-      </div>
+    <section className="py-20 relative overflow-hidden">
+      {/* Abstract Wave Background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat wave-bg"
+        style={{
+          backgroundImage: `url('https://media.istockphoto.com/id/2162843787/video/white-wave-lines-abstract-draped-background.jpg?s=640x640&k=20&c=vG-XgElRqESJ7_5bCmzVDhzMHtqwQ6KVoNLh_5oNKjQ=')`,
+          filter: 'brightness(0.95) contrast(1.1)',
+          opacity: 0.15
+        }}
+      />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50/90 to-gray-50/95" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
