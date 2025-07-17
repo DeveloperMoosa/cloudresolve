@@ -20,23 +20,23 @@ const HeroSection = () => {
       className="relative h-screen overflow-hidden"
     >
       {/* London YouTube Shorts Video Background */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
         <iframe
-          className="absolute top-0 left-0 w-full h-full"
           src="https://www.youtube.com/embed/usw7TodLcx8?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=usw7TodLcx8&playsinline=1"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           title="London Background Video"
+          className="absolute"
           style={{
-            width: '100vw',
-            height: '56.25vw', // 16:9 aspect ratio
-            minHeight: '100vh',
-            minWidth: '177.77vh', // 16:9 aspect ratio
+            width: '177.77vh',
+            minWidth: '100%',
+            height: '100%',
             position: 'absolute',
             left: '50%',
             top: '50%',
-            transform: 'translate(-50%, -50%)'
+            transform: 'translate(-50%, -50%)',
+            pointerEvents: 'none'
           }}
         ></iframe>
       </div>
