@@ -28,8 +28,8 @@ const TestimonialsSection = () => {
             viewport={{ once: true }}
           >
             <img
-              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500"
-              alt="IT Support Excellence"
+              src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500"
+              alt="Professional IT Support Team"
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </motion.div>

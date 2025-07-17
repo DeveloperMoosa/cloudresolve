@@ -19,6 +19,7 @@ Preferred communication style: Simple, everyday language.
 - Replaced YouTube embed with Pexels London Thames River video (https://www.pexels.com/video/3568724/) for better landscape display
 - Removed Awards section completely as per user request (July 17, 2025)
 - Updated testimonials section to remove "award-winning" reference
+- Replaced analytics dashboard image in testimonials section with professional IT support team image
 
 ## System Architecture
 
