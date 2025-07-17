@@ -3,18 +3,43 @@ import { Button } from "@/components/ui/button";
 
 const ExperienceSection = () => {
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden bg-gray-50">
       {/* Abstract Wave Background */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat wave-bg"
-        style={{
-          backgroundImage: `url('https://media.istockphoto.com/id/2162843787/video/white-wave-lines-abstract-draped-background.jpg?s=640x640&k=20&c=vG-XgElRqESJ7_5bCmzVDhzMHtqwQ6KVoNLh_5oNKjQ=')`,
-          filter: 'brightness(0.95) contrast(1.1)',
-          opacity: 0.15
-        }}
-      />
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50/90 to-gray-50/95" />
+      <div className="absolute inset-0">
+        <svg
+          className="absolute inset-0 w-full h-full"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style={{ stopColor: 'hsl(207, 90%, 49%)', stopOpacity: 0.3 }} />
+              <stop offset="100%" style={{ stopColor: 'hsl(207, 90%, 49%)', stopOpacity: 0.1 }} />
+            </linearGradient>
+            <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style={{ stopColor: 'hsl(207, 90%, 49%)', stopOpacity: 0.2 }} />
+              <stop offset="100%" style={{ stopColor: 'hsl(207, 90%, 49%)', stopOpacity: 0.05 }} />
+            </linearGradient>
+          </defs>
+          <path
+            fill="url(#waveGradient)"
+            d="M0,160 C320,300,420,240,560,160 C700,80,780,120,840,160 C900,200,960,240,1080,200 C1200,160,1280,120,1360,160 L1440,200 L1440,320 L0,320 Z"
+            className="wave-animation"
+          />
+          <path
+            fill="url(#waveGradient2)"
+            d="M0,200 C160,160,320,240,480,200 C640,160,800,100,960,140 C1120,180,1280,220,1440,180 L1440,320 L0,320 Z"
+            className="wave-animation-delayed"
+          />
+          <path
+            fill="url(#waveGradient)"
+            d="M0,100 C240,180,480,60,720,100 C960,140,1200,180,1440,120 L1440,320 L0,320 Z"
+            className="wave-animation"
+            style={{ opacity: 0.5 }}
+          />
+        </svg>
+      </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div

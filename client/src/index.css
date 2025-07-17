@@ -2,24 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Wave background animation */
+/* Wave animations */
 @keyframes waveMotion {
   0%, 100% {
-    transform: translateX(0) translateY(0);
-  }
-  25% {
-    transform: translateX(-10px) translateY(-5px);
+    transform: translateX(0);
   }
   50% {
-    transform: translateX(5px) translateY(0);
-  }
-  75% {
-    transform: translateX(-5px) translateY(5px);
+    transform: translateX(-50px);
   }
 }
 
-.wave-bg {
-  animation: waveMotion 20s ease-in-out infinite;
+@keyframes waveMotionReverse {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+}
+
+.wave-animation {
+  animation: waveMotion 8s ease-in-out infinite;
+}
+
+.wave-animation-delayed {
+  animation: waveMotionReverse 6s ease-in-out infinite;
+  animation-delay: 1s;
 }
 
 :root {
