@@ -64,7 +64,7 @@ const TestimonialsSection = () => {
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed">
-                Choose our award-winning IT services and you will have a proactive team to quickly resolve issues. We are dedicated to preventing unwanted downtime and are highly knowledgeable when it comes to the latest technologies.
+                Choose our IT services and you will have a proactive team to quickly resolve issues. We are dedicated to preventing unwanted downtime and are highly knowledgeable when it comes to the latest technologies.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed">
