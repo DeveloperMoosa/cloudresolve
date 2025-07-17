@@ -19,25 +19,27 @@ const HeroSection = () => {
       id="home"
       className="relative h-screen overflow-hidden"
     >
-      {/* London Video Background */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-        poster="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-      >
-        <source 
-          src="https://joy1.videvo.net/videvo_files/video/free/2019-11/large_watermarked/190301_1_25_11_preview.mp4" 
-          type="video/mp4" 
-        />
-        <source 
-          src="https://cdn.videvo.net/videvo_files/video/free/2013-08/large_watermarked/GOPR0084_preview.mp4" 
-          type="video/mp4" 
-        />
-        Your browser does not support the video tag.
-      </video>
+      {/* London YouTube Shorts Video Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <iframe
+          className="absolute top-0 left-0 w-full h-full"
+          src="https://www.youtube.com/embed/usw7TodLcx8?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=usw7TodLcx8&playsinline=1"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="London Background Video"
+          style={{
+            width: '100vw',
+            height: '56.25vw', // 16:9 aspect ratio
+            minHeight: '100vh',
+            minWidth: '177.77vh', // 16:9 aspect ratio
+            position: 'absolute',
+            left: '50%',
+            top: '50%',
+            transform: 'translate(-50%, -50%)'
+          }}
+        ></iframe>
+      </div>
       
       {/* Dark overlay to match SilverCloud style */}
       <div className="absolute inset-0 bg-black/60"></div>

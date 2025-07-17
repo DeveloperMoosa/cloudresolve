@@ -15,6 +15,7 @@ Preferred communication style: Simple, everyday language.
 - Enhanced dynamic visual effects with animated overlay elements
 - Implemented London cityscape video background (July 17, 2025)
 - Fixed video playback issues with multiple fallback sources
+- Embedded specific YouTube Shorts video (https://www.youtube.com/shorts/usw7TodLcx8) as hero background per user request
 
 ## System Architecture
 
