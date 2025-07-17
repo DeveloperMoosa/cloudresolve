@@ -7,36 +7,42 @@ const ServicesSection = () => {
       icon: Cloud,
       title: "Microsoft Office",
       subtitle: "365 & Backup for Office 365",
+      description: "Complete Microsoft 365 deployment, migration, and backup solutions. Ensuring your business data is secure and accessible anywhere.",
       delay: 0.1
     },
     {
       icon: Monitor,
       title: "ServiceDesk",
       subtitle: "IT Support",
+      description: "24/7 professional IT helpdesk support with rapid response times. Expert assistance for all your technical issues and queries.",
       delay: 0.2
     },
     {
       icon: Server,
       title: "Server",
       subtitle: "Management",
+      description: "Comprehensive server maintenance, monitoring, and optimization. Keeping your infrastructure running at peak performance.",
       delay: 0.3
     },
     {
       icon: Network,
       title: "Network",
       subtitle: "Management",
+      description: "End-to-end network design, implementation, and maintenance. Ensuring reliable connectivity and optimal network performance.",
       delay: 0.4
     },
     {
       icon: Users,
       title: "Enhanced security",
       subtitle: "monitoring 365",
+      description: "Advanced threat detection and security monitoring for Microsoft 365. Protecting your business from cyber threats and data breaches.",
       delay: 0.5
     },
     {
       icon: Shield,
       title: "Security &",
       subtitle: "Monitoring",
+      description: "Comprehensive cybersecurity solutions including firewall management, threat detection, and continuous security monitoring.",
       delay: 0.6
     }
   ];
@@ -83,8 +89,11 @@ const ServicesSection = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {service.title}
                 </h3>
-                <p className="text-lg text-gray-700">
+                <p className="text-lg text-gray-700 mb-3">
                   {service.subtitle}
+                </p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {service.description}
                 </p>
               </motion.div>
             );
