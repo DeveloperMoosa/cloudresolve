@@ -19,27 +19,24 @@ const HeroSection = () => {
       id="home"
       className="relative h-screen overflow-hidden"
     >
-      {/* London YouTube Shorts Video Background */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <iframe
-          src="https://www.youtube.com/embed/usw7TodLcx8?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=usw7TodLcx8&playsinline=1"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title="London Background Video"
-          className="absolute"
-          style={{
-            width: '177.77vh',
-            minWidth: '100%',
-            height: '100%',
-            position: 'absolute',
-            left: '50%',
-            top: '50%',
-            transform: 'translate(-50%, -50%)',
-            pointerEvents: 'none'
-          }}
-        ></iframe>
-      </div>
+      {/* London Thames River Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source 
+          src="/london-thames.mp4" 
+          type="video/mp4" 
+        />
+        <source 
+          src="https://videos.pexels.com/video-files/3568724/3568724-uhd_2560_1440_30fps.mp4" 
+          type="video/mp4" 
+        />
+        Your browser does not support the video tag.
+      </video>
       
       {/* Dark overlay to match SilverCloud style */}
       <div className="absolute inset-0 bg-black/60"></div>
