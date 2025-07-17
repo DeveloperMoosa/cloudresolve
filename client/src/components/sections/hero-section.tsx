@@ -78,31 +78,14 @@ const HeroSection = () => {
               </Button>
               <Button
                 onClick={() => scrollToSection("about")}
-                variant="outline"
-                className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-black transition-all rounded-sm"
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-sm transition-all"
                 size="lg"
               >
                 ABOUT US
               </Button>
             </motion.div>
             
-            <motion.div
-              className="space-y-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">Call us on: 020 3597 6100</h3>
-              </div>
-              <div>
-                <h3 className="text-xl md:text-2xl">
-                  <a href="mailto:info@cloudresolve.com" className="hover:underline">
-                    info@cloudresolve.com
-                  </a>
-                </h3>
-              </div>
-            </motion.div>
+
           </div>
         </div>
       </div>

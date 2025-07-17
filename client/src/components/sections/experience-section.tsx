@@ -23,20 +23,7 @@ const ExperienceSection = () => {
             </p>
           </motion.div>
 
-          {/* Image Section */}
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&h=600"
-              alt="IT Support Experience"
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
-          </motion.div>
+
         </div>
 
         {/* Stats Section */}
