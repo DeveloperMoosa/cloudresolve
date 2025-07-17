@@ -16,7 +16,6 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <ContactBanner />
-      <AboutSection />
       <ExperienceSection />
       <ServicesSection />
       <AwardsSection />
