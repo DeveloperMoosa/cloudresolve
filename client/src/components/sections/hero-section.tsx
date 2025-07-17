@@ -19,29 +19,21 @@ const HeroSection = () => {
       id="home"
       className="relative h-screen overflow-hidden"
     >
-      {/* Busy London Video Background */}
+      {/* London Video Background */}
       <video
-        autoPlay={true}
-        muted={true}
-        loop={true}
-        playsInline={true}
-        controls={false}
+        autoPlay
+        muted
+        loop
+        playsInline
         className="absolute inset-0 w-full h-full object-cover"
         poster="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-        onLoadedData={(e) => {
-          console.log('Video loaded successfully');
-          e.currentTarget.play();
-        }}
-        onError={(e) => {
-          console.error('Video failed to load:', e);
-        }}
       >
         <source 
-          src="/sample-video.mp4" 
+          src="https://joy1.videvo.net/videvo_files/video/free/2019-11/large_watermarked/190301_1_25_11_preview.mp4" 
           type="video/mp4" 
         />
         <source 
-          src="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" 
+          src="https://cdn.videvo.net/videvo_files/video/free/2013-08/large_watermarked/GOPR0084_preview.mp4" 
           type="video/mp4" 
         />
         Your browser does not support the video tag.

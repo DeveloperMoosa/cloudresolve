@@ -13,6 +13,8 @@ Preferred communication style: Simple, everyday language.
 - Removed the Awards section from the homepage (December 2024)
 - Added background video to the hero section with floating particle animations
 - Enhanced dynamic visual effects with animated overlay elements
+- Implemented London cityscape video background (July 17, 2025)
+- Fixed video playback issues with multiple fallback sources
 
 ## System Architecture
 
