@@ -59,12 +59,15 @@ const AboutSection = () => {
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed">
-                CloudResolve ensures your business receives the finest quality support at all times. No matter the size of your business, we have packages to suit various needs.
+                Silver Cloud ensures your business receives the finest quality support at all times. No matter the size of your business, we have packages to suit various needs.
               </p>
               
               <Button
                 onClick={() => scrollToSection("contact")}
-                className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold rounded-sm transition-all mt-6"
+                className="text-white px-8 py-3 text-lg font-semibold rounded-sm transition-all mt-6"
+                style={{ backgroundColor: 'hsl(207, 90%, 49%)' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'hsl(207, 90%, 44%)'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'hsl(207, 90%, 49%)'}
                 size="lg"
               >
                 REQUEST A BROCHURE

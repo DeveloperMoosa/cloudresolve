@@ -26,10 +26,10 @@ const Navigation = () => {
             <div className="flex items-center">
               <img 
                 src="/logo.jpeg" 
-                alt="CloudResolve Logo" 
-                className="h-10 w-auto mr-3"
+                alt="Logo" 
+                className="h-10 w-auto"
+                style={{ backgroundColor: 'transparent' }}
               />
-              <span className="text-2xl font-bold" style={{ color: 'hsl(207, 90%, 49%)' }}>Silver Cloud</span>
             </div>
           </div>
           
