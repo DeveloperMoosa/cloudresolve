@@ -2,7 +2,7 @@ import { Phone, Mail } from "lucide-react";
 
 const ContactBanner = () => {
   return (
-    <section className="bg-red-600 text-white py-4">
+    <section className="text-white py-4" style={{ backgroundColor: 'hsl(207, 90%, 49%)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-center gap-8 md:gap-16">
           <div className="flex items-center gap-3">
@@ -17,8 +17,8 @@ const ContactBanner = () => {
           
           <div className="flex items-center gap-3">
             <Mail className="w-6 h-6" />
-            <a href="mailto:info@cloudresolve.com" className="text-lg font-bold hover:underline">
-              info@cloudresolve.com
+            <a href="mailto:info@silvercloud-tech.com" className="text-lg font-bold hover:underline">
+              info@silvercloud-tech.com
             </a>
           </div>
         </div>

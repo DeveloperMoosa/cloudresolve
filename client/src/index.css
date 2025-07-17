@@ -13,7 +13,7 @@
   --card-foreground: hsl(220, 14.3%, 4.1%);
   --border: hsl(214, 32%, 91%);
   --input: hsl(214, 32%, 91%);
-  --primary: hsl(0, 84%, 60%);
+  --primary: hsl(207, 90%, 54%);
   --primary-foreground: hsl(210, 40%, 98%);
   --secondary: hsl(210, 40%, 96%);
   --secondary-foreground: hsl(222, 84%, 4.9%);
@@ -21,20 +21,20 @@
   --accent-foreground: hsl(222, 84%, 4.9%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(210, 40%, 98%);
-  --ring: hsl(0, 84%, 60%);
+  --ring: hsl(207, 90%, 54%);
   --radius: 0.5rem;
   
-  /* Red Theme Colors - Matching SilverCloud */
-  --red-50: hsl(0, 100%, 97%);
-  --red-100: hsl(0, 100%, 93%);
-  --red-200: hsl(0, 100%, 87%);
-  --red-300: hsl(0, 100%, 80%);
-  --red-400: hsl(0, 100%, 67%);
-  --red-500: hsl(0, 84%, 60%);
-  --red-600: hsl(0, 84%, 55%);
-  --red-700: hsl(0, 84%, 50%);
-  --red-800: hsl(0, 84%, 45%);
-  --red-900: hsl(0, 84%, 40%);
+  /* Azure Blue Theme Colors - Matching CloudResolve */
+  --azure-50: hsl(207, 100%, 97%);
+  --azure-100: hsl(207, 100%, 93%);
+  --azure-200: hsl(207, 100%, 87%);
+  --azure-300: hsl(207, 100%, 80%);
+  --azure-400: hsl(207, 100%, 67%);
+  --azure-500: hsl(207, 90%, 54%);
+  --azure-600: hsl(207, 90%, 49%);
+  --azure-700: hsl(207, 90%, 44%);
+  --azure-800: hsl(207, 90%, 39%);
+  --azure-900: hsl(207, 90%, 34%);
   --deep-navy: hsl(220, 20%, 15%);
 }
 

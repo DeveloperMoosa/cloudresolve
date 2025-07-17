@@ -29,7 +29,7 @@ const Navigation = () => {
                 alt="CloudResolve Logo" 
                 className="h-10 w-auto mr-3"
               />
-              <span className="text-2xl font-bold text-red-primary">CloudResolve</span>
+              <span className="text-2xl font-bold" style={{ color: 'hsl(207, 90%, 49%)' }}>Silver Cloud</span>
             </div>
           </div>
           
@@ -38,13 +38,17 @@ const Navigation = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <button
                 onClick={() => scrollToSection("home")}
-                className="text-gray-700 hover:text-red-primary px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 px-3 py-2 text-sm font-medium transition-colors"
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(207, 90%, 49%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = ''}
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-gray-700 hover:text-red-primary px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 px-3 py-2 text-sm font-medium transition-colors"
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(207, 90%, 49%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = ''}
               >
                 About
               </button>
@@ -62,7 +66,10 @@ const Navigation = () => {
               </button>
               <a
                 href="tel:02035976100"
-                className="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-700 transition-colors"
+                className="text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                style={{ backgroundColor: 'hsl(207, 90%, 49%)' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'hsl(207, 90%, 44%)'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'hsl(207, 90%, 49%)'}
               >
                 Call: 020 3597 6100
               </a>

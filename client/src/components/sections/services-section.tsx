@@ -70,11 +70,14 @@ const ServicesSection = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <motion.div
-                  className="mx-auto w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-red-200 transition-colors"
+                  className="mx-auto w-20 h-20 rounded-full flex items-center justify-center mb-6 transition-colors"
+                  style={{ backgroundColor: 'hsl(207, 100%, 93%)', '--hover-bg': 'hsl(207, 100%, 87%)' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'hsl(207, 100%, 87%)'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'hsl(207, 100%, 93%)'}
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <IconComponent className="w-10 h-10 text-red-600" />
+                  <IconComponent className="w-10 h-10" style={{ color: 'hsl(207, 90%, 49%)' }} />
                 </motion.div>
                 
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
