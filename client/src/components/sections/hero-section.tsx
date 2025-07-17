@@ -19,7 +19,7 @@ const HeroSection = () => {
       id="home"
       className="relative h-screen overflow-hidden"
     >
-      {/* Background Video - London Landmarks */}
+      {/* Background Video - London Landmarks with Busy Traffic */}
       <video
         autoPlay
         muted
@@ -28,6 +28,15 @@ const HeroSection = () => {
         className="absolute inset-0 w-full h-full object-cover"
         poster="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
       >
+        {/* High-quality London traffic and landmarks videos */}
+        <source
+          src="https://cdn.pixabay.com/video/2023/11/30/190502-887623901_large.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="https://cdn.pixabay.com/video/2019/12/09/30068-376515632_large.mp4"
+          type="video/mp4"
+        />
         <source
           src="https://cdn.pixabay.com/video/2018/02/14/14885-256743893_large.mp4"
           type="video/mp4"
