@@ -30,6 +30,25 @@
   animation-delay: 1s;
 }
 
+/* Anti-clockwise rotation for testimonial cards */
+@keyframes rotateAntiClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.rotate-card {
+  animation: rotateAntiClockwise 60s linear infinite;
+  transform-origin: center;
+}
+
+.rotate-card:hover {
+  animation-play-state: paused;
+}
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(220, 14.3%, 4.1%);

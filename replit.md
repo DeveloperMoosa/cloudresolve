@@ -21,6 +21,11 @@ Preferred communication style: Simple, everyday language.
 - Updated testimonials section to remove "award-winning" reference
 - Replaced analytics dashboard image in testimonials section with professional IT support team image
 - Added abstract wave background to Experience section with subtle animation effect (iStock video background)
+- Enhanced testimonials section with additional reviews and anti-clockwise rotating animation carousel
+- Replaced all "Silver Cloud" references with "CloudResolve" throughout the site (July 17, 2025)
+- Updated contact email to info@cloudresolve.co.uk
+- Removed physical address from contact section as per user request
+- Added comprehensive SEO optimization tags to improve Google rankings
 
 ## System Architecture
 

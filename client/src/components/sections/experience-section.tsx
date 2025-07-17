@@ -53,7 +53,7 @@ const ExperienceSection = () => {
             Experience The Difference: Trusted, Knowledgeable and Reliable IT Support
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-6 text-center">
-            Silver Cloud is a leading independent IT support provider working with companies across the UK. We deliver cost-effective services and bespoke solutions to SMB, mid-market and corporate businesses.
+            CloudResolve is a leading independent IT support provider working with companies across the UK. We deliver cost-effective services and bespoke solutions to SMB, mid-market and corporate businesses.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mb-6 text-center">
             Ideal for anyone seeking first-class IT support, our team always listens closely to your unique business requirements, so we can recommend the best solutions from our extensive and fully customisable portfolio.
@@ -65,7 +65,7 @@ const ExperienceSection = () => {
             Our IT support involves providing a comprehensive evaluation of your current technologies, after which we can recommend the best solutions for your future needs. Our goal is always to provide tailored solutions that align with your business goals, while ensuring you enjoy the best value for your business.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed mb-8 text-center">
-            Silver Cloud ensures your business receives the finest quality support at all times. No matter the size of your business, we have packages to suit various needs.
+            CloudResolve ensures your business receives the finest quality support at all times. No matter the size of your business, we have packages to suit various needs.
           </p>
           
           <Button

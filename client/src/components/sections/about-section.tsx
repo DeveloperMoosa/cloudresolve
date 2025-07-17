@@ -28,7 +28,7 @@ const AboutSection = () => {
           >
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight text-center">
-                Silver Cloud is a leading independent IT support provider working with companies across the UK. We deliver cost-effective services and bespoke solutions to SMB, mid-market and corporate businesses.
+                CloudResolve is a leading independent IT support provider working with companies across the UK. We deliver cost-effective services and bespoke solutions to SMB, mid-market and corporate businesses.
               </h2>
               
               <p className="text-lg text-gray-700 leading-relaxed text-center">
@@ -44,7 +44,7 @@ const AboutSection = () => {
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed text-center">
-                Silver Cloud ensures your business receives the finest quality support at all times. No matter the size of your business, we have packages to suit various needs.
+                CloudResolve ensures your business receives the finest quality support at all times. No matter the size of your business, we have packages to suit various needs.
               </p>
               
               <Button

@@ -76,7 +76,7 @@ const ContactSection = () => {
             Contact Us
           </h2>
           <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-            Located in the heart of London, Silver Cloud will never outsource our IT support. Instead, we have our own team of IT experts and specialists ready to fulfil your software, hardware and infrastructure requirements. If it's technology-related, our team has you covered!
+            Located in the heart of London, CloudResolve will never outsource our IT support. Instead, we have our own team of IT experts and specialists ready to fulfil your software, hardware and infrastructure requirements. If it's technology-related, our team has you covered!
           </p>
         </motion.div>
 
@@ -93,10 +93,6 @@ const ContactSection = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Get in Touch</h3>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-gray-900">Address:</h4>
-                  <p className="text-gray-700">54 Poland Street, London W1F 7NJ, UK</p>
-                </div>
-                <div>
                   <h4 className="font-semibold text-gray-900">Tel:</h4>
                   <p className="text-gray-700">
                     <a href="tel:02035976100" className="transition-colors" onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(207, 90%, 49%)'} onMouseLeave={(e) => e.currentTarget.style.color = ''}>020 3597 6100</a>
@@ -105,7 +101,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-gray-900">Email:</h4>
                   <p className="text-gray-700">
-                    <a href="mailto:info@silvercloud-tech.com" className="transition-colors" onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(207, 90%, 49%)'} onMouseLeave={(e) => e.currentTarget.style.color = ''}>info@silvercloud-tech.com</a>
+                    <a href="mailto:info@cloudresolve.co.uk" className="transition-colors" onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(207, 90%, 49%)'} onMouseLeave={(e) => e.currentTarget.style.color = ''}>info@cloudresolve.co.uk</a>
                   </p>
                 </div>
                 <div>

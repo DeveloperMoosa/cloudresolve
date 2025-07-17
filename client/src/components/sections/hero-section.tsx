@@ -38,10 +38,10 @@ const HeroSection = () => {
         Your browser does not support the video tag.
       </video>
       
-      {/* Dark overlay to match SilverCloud style */}
+      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
       
-      {/* Main hero content matching SilverCloud layout exactly */}
+      {/* Main hero content */}
       <div className="relative z-10 h-full flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-white max-w-3xl">
@@ -51,7 +51,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Silver Cloud is a leading independent UK IT support provider supplying cost-effective services and bespoke solutions to SMB, mid-market and corporate businesses.
+              CloudResolve is a leading independent UK IT support provider supplying cost-effective services and bespoke solutions to SMB, mid-market and corporate businesses.
             </motion.p>
             
             <motion.h1
