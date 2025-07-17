@@ -20,30 +20,32 @@ const HeroSection = () => {
       className="relative h-screen overflow-hidden"
     >
       {/* Busy London Video Background */}
-      <div className="absolute inset-0 w-full h-full">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          poster="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-        >
-          {/* Free London traffic and city videos from Pixabay */}
-          <source 
-            src="https://cdn.pixabay.com/video/2019/11/19/29359-372163893_large.mp4" 
-            type="video/mp4" 
-          />
-          <source 
-            src="https://cdn.pixabay.com/video/2018/11/14/18917-301572772_large.mp4" 
-            type="video/mp4" 
-          />
-          <source 
-            src="https://cdn.pixabay.com/video/2022/11/06/137629-768501773_large.mp4" 
-            type="video/mp4" 
-          />
-        </video>
-      </div>
+      <video
+        autoPlay={true}
+        muted={true}
+        loop={true}
+        playsInline={true}
+        controls={false}
+        className="absolute inset-0 w-full h-full object-cover"
+        poster="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+        onLoadedData={(e) => {
+          console.log('Video loaded successfully');
+          e.currentTarget.play();
+        }}
+        onError={(e) => {
+          console.error('Video failed to load:', e);
+        }}
+      >
+        <source 
+          src="/sample-video.mp4" 
+          type="video/mp4" 
+        />
+        <source 
+          src="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" 
+          type="video/mp4" 
+        />
+        Your browser does not support the video tag.
+      </video>
       
       {/* Dark overlay to match SilverCloud style */}
       <div className="absolute inset-0 bg-black/60"></div>
