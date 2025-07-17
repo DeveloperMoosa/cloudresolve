@@ -1,254 +1,195 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
-import { MapPin, Phone, Mail, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
-import { insertContactSubmissionSchema, type InsertContactSubmission } from "@shared/schema";
 
 const ContactSection = () => {
-  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    requirements: ""
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const form = useForm<InsertContactSubmission>({
-    resolver: zodResolver(insertContactSubmissionSchema),
-    defaultValues: {
-      name: "",
-      company: "",
-      email: "",
-      phone: "",
-      message: "",
-    },
-  });
-
-  const submitContactForm = useMutation({
-    mutationFn: async (data: InsertContactSubmission) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: (data) => {
-      toast({
-        title: "Message Sent Successfully!",
-        description: data.message,
-      });
-      form.reset();
-      setIsSubmitting(false);
-    },
-    onError: (error: any) => {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: error.message || "Failed to send message. Please try again.",
-      });
-      setIsSubmitting(false);
-    },
-  });
-
-  const onSubmit = (data: InsertContactSubmission) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     setIsSubmitting(true);
-    submitContactForm.mutate(data);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "We'll get back to you within 24 hours.",
+        });
+        setFormData({
+          name: "",
+          company: "",
+          email: "",
+          phone: "",
+          requirements: ""
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again or call us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const contactInfo = [
-    {
-      icon: MapPin,
-      title: "Address",
-      content: "54 Poland Street, London W1F 7NJ, UK",
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      content: "020 3597 6100",
-      href: "tel:02035976100",
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      content: "info@cloudresolve.com",
-      href: "mailto:info@cloudresolve.com",
-    },
-    {
-      icon: Twitter,
-      title: "Social Media",
-      content: "@CloudResolveTech",
-      href: "https://twitter.com/CloudResolveTech",
-    },
-  ];
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Located in the heart of London, CloudResolve will never outsource our IT support.
-            Instead, we have our own team of IT experts and specialists ready to fulfil your software, hardware and infrastructure requirements.
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            Contact Us
+          </h2>
+          <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            Located in the heart of London, CloudResolve will never outsource our IT support. Instead, we have our own team of IT experts and specialists ready to fulfil your software, hardware and infrastructure requirements. If it's technology-related, our team has you covered!
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <motion.div
+            className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=600"
-              alt="Professional business meeting"
-              className="rounded-xl shadow-lg w-full h-auto mb-8"
-            />
-
-            <div className="space-y-6">
-              {contactInfo.map((info, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <info.icon className="text-2xl text-azure-blue mr-4 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">{info.title}</h3>
-                    {info.href ? (
-                      <a
-                        href={info.href}
-                        className="text-gray-600 hover:text-azure-blue transition-colors"
-                      >
-                        {info.content}
-                      </a>
-                    ) : (
-                      <p className="text-gray-600">{info.content}</p>
-                    )}
-                  </div>
-                </motion.div>
-              ))}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Get in Touch</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-gray-900">Address:</h4>
+                  <p className="text-gray-700">54 Poland Street, London W1F 7NJ, UK</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Tel:</h4>
+                  <p className="text-gray-700">
+                    <a href="tel:02035976100" className="hover:text-red-600">020 3597 6100</a>
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Email:</h4>
+                  <p className="text-gray-700">
+                    <a href="mailto:info@cloudresolve.com" className="hover:text-red-600">info@cloudresolve.com</a>
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Social:</h4>
+                  <p className="text-gray-700">@CloudResolve</p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
           {/* Contact Form */}
           <motion.div
-            className="bg-azure-50 p-8 rounded-xl"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
+            <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg shadow-lg">
+              <div>
+                <Input
+                  type="text"
                   name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input
-                          {...field}
-                          className="border-gray-300 focus:ring-azure-blue focus:border-azure-blue"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full"
                 />
-
-                <FormField
-                  control={form.control}
+              </div>
+              
+              <div>
+                <Input
+                  type="text"
                   name="company"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Company Name</FormLabel>
-                      <FormControl>
-                        <Input
-                          {...field}
-                          className="border-gray-300 focus:ring-azure-blue focus:border-azure-blue"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
+                  placeholder="Company Name"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full"
                 />
-
-                <FormField
-                  control={form.control}
+              </div>
+              
+              <div>
+                <Input
+                  type="email"
                   name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email*</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="email"
-                          {...field}
-                          className="border-gray-300 focus:ring-azure-blue focus:border-azure-blue"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
+                  placeholder="Email*"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full"
                 />
-
-                <FormField
-                  control={form.control}
+              </div>
+              
+              <div>
+                <Input
+                  type="tel"
                   name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Phone</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="tel"
-                          {...field}
-                          className="border-gray-300 focus:ring-azure-blue focus:border-azure-blue"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
+                  placeholder="Phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full"
                 />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Please provide us with a brief description of your requirements*</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          {...field}
-                          rows={4}
-                          className="border-gray-300 focus:ring-azure-blue focus:border-azure-blue resize-none"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
+              </div>
+              
+              <div>
+                <Textarea
+                  name="requirements"
+                  placeholder="Please provide us with a brief description of your requirements*"
+                  value={formData.requirements}
+                  onChange={handleChange}
+                  required
+                  rows={4}
+                  className="w-full"
                 />
-
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-azure-blue text-white hover:bg-azure-600 transition-colors transform hover:scale-105"
-                  size="lg"
-                >
-                  {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
-                </Button>
-              </form>
-            </Form>
+              </div>
+              
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-red-600 hover:bg-red-700 text-white py-3 text-lg font-semibold rounded-sm transition-all"
+              >
+                {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
+              </Button>
+            </form>
           </motion.div>
         </div>
       </div>

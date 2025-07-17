@@ -1,19 +1,23 @@
 import { motion } from "framer-motion";
-import { SiApple, SiGoogle } from "react-icons/si";
-import { Server, Shield, Cloud, Building2 } from "lucide-react";
 
 const PartnersSection = () => {
   const partners = [
-    { icon: Building2, name: "Microsoft" },
-    { icon: SiApple, name: "Apple" },
-    { icon: SiGoogle, name: "Google" },
-    { icon: Server, name: "Server Solutions" },
-    { icon: Shield, name: "Security Partners" },
-    { icon: Cloud, name: "Cloud Providers" },
+    "Microsoft",
+    "Apple", 
+    "Google",
+    "Amazon",
+    "HP",
+    "Dell",
+    "Cisco",
+    "VMware",
+    "Oracle",
+    "Salesforce",
+    "Trend Micro",
+    "Mimecast"
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -22,30 +26,40 @@ const PartnersSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Technology Partners</h2>
-          <p className="text-lg text-gray-600">We work with industry-leading technology providers</p>
+          <h3 className="text-2xl font-bold text-gray-900 mb-8">
+            Trusted Partners & Technologies
+          </h3>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-          {partners.map((partner, index) => (
-            <motion.div
-              key={index}
-              className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-105"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ 
-                scale: 1.1,
-                transition: { duration: 0.3 }
-              }}
-            >
-              <partner.icon 
-                className="text-4xl text-gray-400 hover:text-azure-blue transition-colors" 
-                title={partner.name}
-              />
-            </motion.div>
-          ))}
+        {/* Partner logos grid with continuous scrolling animation */}
+        <div className="relative overflow-hidden">
+          <motion.div
+            className="flex space-x-16 items-center"
+            animate={{
+              x: [0, -1500],
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 25,
+                ease: "linear",
+              },
+            }}
+          >
+            {/* Duplicate the partners array to create seamless loop */}
+            {[...partners, ...partners].map((partner, index) => (
+              <motion.div
+                key={`${partner}-${index}`}
+                className="flex-shrink-0 w-32 h-20 flex items-center justify-center bg-gray-50 rounded-lg border grayscale hover:grayscale-0 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+              >
+                <span className="text-lg font-semibold text-gray-600 hover:text-red-600 transition-colors">
+                  {partner}
+                </span>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

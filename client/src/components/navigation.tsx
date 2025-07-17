@@ -29,7 +29,7 @@ const Navigation = () => {
                 alt="CloudResolve Logo" 
                 className="h-10 w-auto mr-3"
               />
-              <span className="text-2xl font-bold text-azure-blue">CloudResolve</span>
+              <span className="text-2xl font-bold text-red-primary">CloudResolve</span>
             </div>
           </div>
           
@@ -38,31 +38,31 @@ const Navigation = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <button
                 onClick={() => scrollToSection("home")}
-                className="text-gray-700 hover:text-azure-blue px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-red-primary px-3 py-2 text-sm font-medium transition-colors"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-gray-700 hover:text-azure-blue px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-red-primary px-3 py-2 text-sm font-medium transition-colors"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("services")}
-                className="text-gray-700 hover:text-azure-blue px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-red-primary px-3 py-2 text-sm font-medium transition-colors"
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-gray-700 hover:text-azure-blue px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-red-primary px-3 py-2 text-sm font-medium transition-colors"
               >
                 Contact
               </button>
               <a
                 href="tel:02035976100"
-                className="bg-azure-blue text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-azure-600 transition-colors"
+                className="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-700 transition-colors"
               >
                 Call: 020 3597 6100
               </a>
@@ -75,7 +75,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-azure-blue"
+              className="text-gray-700 hover:text-red-primary"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -88,31 +88,31 @@ const Navigation = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button
                 onClick={() => scrollToSection("home")}
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-azure-blue w-full text-left"
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-primary w-full text-left"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-azure-blue w-full text-left"
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-primary w-full text-left"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("services")}
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-azure-blue w-full text-left"
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-primary w-full text-left"
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-azure-blue w-full text-left"
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-primary w-full text-left"
               >
                 Contact
               </button>
               <a
                 href="tel:02035976100"
-                className="block bg-azure-blue text-white px-3 py-2 rounded-lg text-base font-medium hover:bg-azure-600 transition-colors text-center mx-3"
+                className="block bg-red-600 text-white px-3 py-2 rounded-lg text-base font-medium hover:bg-red-700 transition-colors text-center mx-3"
               >
                 Call: 020 3597 6100
               </a>
