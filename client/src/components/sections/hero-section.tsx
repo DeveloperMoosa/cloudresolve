@@ -19,50 +19,30 @@ const HeroSection = () => {
       id="home"
       className="relative h-screen overflow-hidden"
     >
-      {/* London Background with Animated Elements */}
-      <div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')`
-        }}
-      >
-        {/* Animated floating particles to simulate movement */}
-        <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-white/20 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                x: [0, Math.random() * 100 - 50],
-                y: [0, Math.random() * 100 - 50],
-                opacity: [0.2, 0.8, 0.2],
-              }}
-              transition={{
-                duration: 3 + Math.random() * 4,
-                repeat: Infinity,
-                repeatType: "reverse",
-                ease: "easeInOut",
-              }}
-            />
-          ))}
-        </div>
-        
-        {/* Moving overlay to simulate traffic */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"
-          animate={{
-            x: ['-100%', '100%'],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
+      {/* Busy London Video Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+        >
+          {/* Free London traffic and city videos from Pixabay */}
+          <source 
+            src="https://cdn.pixabay.com/video/2019/11/19/29359-372163893_large.mp4" 
+            type="video/mp4" 
+          />
+          <source 
+            src="https://cdn.pixabay.com/video/2018/11/14/18917-301572772_large.mp4" 
+            type="video/mp4" 
+          />
+          <source 
+            src="https://cdn.pixabay.com/video/2022/11/06/137629-768501773_large.mp4" 
+            type="video/mp4" 
+          />
+        </video>
       </div>
       
       {/* Dark overlay to match SilverCloud style */}
