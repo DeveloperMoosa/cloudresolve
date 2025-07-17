@@ -23,9 +23,13 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-azure-blue flex items-center">
-              <Cloud className="mr-2" />
-              CloudResolve
+            <div className="flex items-center">
+              <img 
+                src="/logo.jpeg" 
+                alt="CloudResolve Logo" 
+                className="h-10 w-auto mr-3"
+              />
+              <span className="text-2xl font-bold text-azure-blue">CloudResolve</span>
             </div>
           </div>
           

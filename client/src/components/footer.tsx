@@ -19,7 +19,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="text-2xl font-bold mb-4 flex items-center">
-              <Cloud className="mr-2" />
+              <img 
+                src="/logo.jpeg" 
+                alt="CloudResolve Logo" 
+                className="h-8 w-auto mr-3"
+              />
               CloudResolve
             </div>
             <p className="text-gray-300 mb-4">

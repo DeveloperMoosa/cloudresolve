@@ -26,14 +26,14 @@ const HeroSection = () => {
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
-        poster="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&h=1080"
+        poster="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&h=1080"
       >
         <source
-          src="https://sample-videos.com/zip/10/mp4/1080/mp4/SampleVideo_1280x720_1mb.mp4"
+          src="https://cdn.pixabay.com/video/2019/11/19/29292-372346023_large.mp4"
           type="video/mp4"
         />
         <source
-          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          src="https://cdn.pixabay.com/video/2019/05/15/23739-342136529_large.mp4"
           type="video/mp4"
         />
         {/* Browser fallback */}
