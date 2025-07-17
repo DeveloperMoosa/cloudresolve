@@ -64,40 +64,6 @@ const ExperienceSection = () => {
             REQUEST A BROCHURE
           </Button>
         </motion.div>
-
-        {/* Stats Section */}
-        <motion.div
-          className="mt-20 text-center"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="space-y-2">
-              <div className="text-5xl md:text-6xl font-bold" style={{ color: 'hsl(207, 90%, 49%)' }}>20</div>
-              <div className="text-lg font-medium text-gray-900">Years Experience Providing</div>
-              <div className="text-lg font-medium text-gray-900">IT Support</div>
-            </div>
-            
-            <div className="space-y-2">
-              <div className="text-5xl md:text-6xl font-bold" style={{ color: 'hsl(207, 90%, 49%)' }}>1</div>
-              <div className="text-lg font-medium text-gray-900">Hour Average</div>
-              <div className="text-lg font-medium text-gray-900">Response Time</div>
-            </div>
-            
-            <div className="space-y-2">
-              <div className="text-5xl md:text-6xl font-bold" style={{ color: 'hsl(207, 90%, 49%)' }}>10</div>
-              <div className="text-lg font-medium text-gray-900">Years Average Customer Relationships</div>
-            </div>
-            
-            <div className="space-y-2">
-              <div className="text-5xl md:text-6xl font-bold" style={{ color: 'hsl(207, 90%, 49%)' }}>24/7</div>
-              <div className="text-lg font-medium text-gray-900">In-house</div>
-              <div className="text-lg font-medium text-gray-900">IT Support</div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
