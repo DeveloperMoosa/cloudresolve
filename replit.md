@@ -8,6 +8,12 @@ This is a full-stack web application built with React and Express.js, featuring 
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+- Removed the Awards section from the homepage (December 2024)
+- Added background video to the hero section with floating particle animations
+- Enhanced dynamic visual effects with animated overlay elements
+
 ## System Architecture
 
 ### Frontend Architecture

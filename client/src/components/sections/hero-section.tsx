@@ -17,11 +17,38 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center parallax-bg"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 127, 255, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&h=1080')`,
-      }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        poster="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&h=1080"
+      >
+        <source
+          src="https://sample-videos.com/zip/10/mp4/1080/mp4/SampleVideo_1280x720_1mb.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          type="video/mp4"
+        />
+        {/* Browser fallback */}
+        Your browser does not support the video tag.
+      </video>
+      
+      {/* Animated technology particles overlay for more dynamic effect */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="floating-shape w-32 h-32 bg-white rounded-full" style={{ top: '20%', left: '10%', animationDelay: '0s' }}></div>
+        <div className="floating-shape w-24 h-24 bg-white rounded-full" style={{ top: '60%', right: '15%', animationDelay: '2s' }}></div>
+        <div className="floating-shape w-16 h-16 bg-white rounded-full" style={{ bottom: '30%', left: '20%', animationDelay: '4s' }}></div>
+        <div className="floating-shape w-20 h-20 bg-white rounded-full" style={{ top: '40%', right: '30%', animationDelay: '6s' }}></div>
+      </div>
+      
+      {/* Video overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-azure-blue/80 to-deep-navy/80"></div>
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
         <motion.h1
