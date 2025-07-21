@@ -28,7 +28,7 @@ const HeroSection = () => {
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source 
-          src="/background-video.mp4" 
+          src="/london-aerial-hq.mp4" 
           type="video/mp4" 
         />
         Your browser does not support the video tag.
