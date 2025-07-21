@@ -17,6 +17,7 @@ Preferred communication style: Simple, everyday language.
 - Fixed video playback issues with multiple fallback sources
 - Embedded specific YouTube Shorts video (https://www.youtube.com/shorts/usw7TodLcx8) as hero background per user request
 - Replaced YouTube embed with Pexels London Thames River video (https://www.pexels.com/video/3568724/) for better landscape display
+- Updated hero background to use YouTube video (https://www.youtube.com/watch?v=CzT-LSCqCyc) as requested (July 23, 2025)
 - Removed Awards section completely as per user request (July 17, 2025)
 - Updated testimonials section to remove "award-winning" reference
 - Replaced analytics dashboard image in testimonials section with professional IT support team image
